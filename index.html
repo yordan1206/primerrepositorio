@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Práctica 2</title>
+  </head>
+
+  <body>
+    <h1>Tienda de Celulares</h1>
+    visitas: <h2 id="visitas"></h2> 
+    <a href="#info1" informaicón 1</a>
+    <a href="#info2"> informaicón 2</a>
+    <h2>MENU GALERÍA</h2>
+    <a href="./galeria1.html"> galeria 1</a>
+    <a href="./galeria2.html" target="_blank"> Galeria 2</a>
+    <main>
+      <p>Honestidad y Calidad nuestros compromisos</p>
+    </main>
+    <img src="./imagenes/tienda.jpg">
+    <h2 id="info1">información 1 </h2>
+    <p></p>
+    <h2 id="info2">información 2</h2>
+    <p>este esjajjaja </p>
+    <h3>links de interés :</h3>
+    <a href="https://www.ktronix.com/celulares/telefonos-celulares/c/BI_101_KTRON">Katronix</a>
+    <script>
+      let visitasActuales= localStorage.getItem("visitas");
+      if(visitasActuales){
+        let aumento = parseInt(visitasActuales)+1;
+        document.getElementById("visitas").innerHTML=aumento;
+        localStorage.setItem("visitas",aumento);
+      }else{
+        localStorage.setItem("visitas",1);
+        document.getElementById("visitas").innerHTML=1;
+      }
+     
+      localStorage.setItem("visitas",23);
+      let numeroVisitas = localStorage.getItem("visitas");
+      document.getElementById("visitas").innerHTML = numeroVisitas;
+      //console.log(localStore.getItem("nombre"));
+
+    </script>
+  </body>
+
+</html>
